@@ -1,0 +1,11 @@
+Julia Sanford
+CSCI 3753
+PA4
+
+You will need a simulator to run the different types of programs in order to run the paging algorithms.
+
+Then, run the following commands to clean the directory you are working from, compile the LRU and predictive paging alrogithm, then run the files:
+
+	make clean
+	make
+	./test-lru OR ./test-predict
