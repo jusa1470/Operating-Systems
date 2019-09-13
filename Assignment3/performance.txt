@@ -1,0 +1,61 @@
+Julia Sanford
+CSCI 3753
+PA3
+
+Tests:
+
+Number for requester thread = 1
+Number for resolver thread = 1
+Total run time: 2.902902
+Thread 1 serviced 5 files.
+
+
+Number for requester thread = 1
+Number for resolver thread = 3
+Total run time: 0.820412
+Thread 1 serviced 5 files.
+
+
+Number for requester thread = 3
+Number for resolver thread = 1
+Total run time: 2.361267
+Thread 3 serviced 1 files.
+Thread 2 serviced 2 files.
+Thread 1 serviced 2 files.
+
+
+Number for requester thread = 3
+Number for resolver thread = 3
+Total run time: 0.969827
+Thread 3 serviced 1 files.
+Thread 2 serviced 2 files.
+Thread 1 serviced 2 files.
+
+
+Number for requester thread = 5
+Number for resolver thread = 5
+Total run time: 0.930510
+Thread 3 serviced 1 files.
+Thread 1 serviced 1 files.
+Thread 4 serviced 1 files.
+Thread 5 serviced 1 files.
+Thread 2 serviced 1 files.
+
+
+Number for requester thread = 8
+Number for resolver thread = 5
+Total run time: 3.152875
+Thread 6 serviced 0 files.
+Thread 7 serviced 0 files.
+Thread 8 serviced 0 files.
+Thread 1 serviced 1 files.
+Thread 4 serviced 1 files.
+Thread 2 serviced 1 files.
+Thread 5 serviced 1 files.
+Thread 3 serviced 1 files.
+
+
+
+Paragraphs:
+
+My results were very similar to those in the graph. There were some differences, but that it due to when the threads get interrupted and how often which will cause different amounts of context switches. When there are very few requester threads and resolver threads, such as 1 and 1, it does not take as long to run because it does not have to do a lot of context switches and the two threads can run through a lot of the code at once. Sometimes, however, it will take some time, but that is just because one requester thread must service all 5 files by itself. When you increase the number of resolver threads, so you have 1 requester and 3 resolvers, then it will take a little bit longer to switch between threads, and there is still only one requester servicing all 5 files. When you increase the number of requester threads, so you have 3 requesters and 1 resolver, it runs very quickly because there is not as much time going to context switches for the resolvers and the requesters are helping each other to service 5 files. When there are as many requester threads as files, it runs very quickly because all files are being service by their own thread. Increasing the number of requester threads to be more than the number of files increases the time. This is because some of the requester threads will take the CPU and cause more context switches while not completing anything useful to the problem.

@@ -1,0 +1,15 @@
+Julia Sanford
+CSCI 3753
+PA3
+
+1. Create the source code for the problem in multi_lookup.c
+
+2. Create any structs, classes, and functions definitions in the multi_lookup.h
+
+3. Create a Makefile that will clean up any files created during the program
+
+4. run "make clean"
+
+5. run "make multi_lookup"
+
+6. run "./multi_lookup <# requester threads> <# resolver threads> serviced.txt results.txt input/names*.txt"
